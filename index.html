@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="container mx-auto sticky z-50 shadow-xl">
+    <header class="container mx-auto sticky top-0 z-50 shadow-xl">
         <div class="navbar bg-base-100 p-3 border-2 border-red-500">
             <div class="navbar-start md:hidden">
                 <div class="dropdown">
@@ -34,7 +34,7 @@
                 <img src="Logo.png">
             </div>
             <div class="navbar-center">
-                <a class="btn btn-ghost text-xl">Sort By View</a>
+                <a id="sort-btn" class="btn btn-ghost text-xl">Sort By View</a>
             </div>
             <div class="navbar-end">
                 <button class="btn btn-ghost btn-circle">
@@ -50,8 +50,14 @@
             </div>
         </div>
     </header>
-    <main class="container mx-auto my-8">
-        <section id="video-container">
+    <main class="container mx-auto">
+        <div class="divider"></div>
+        <section class="my-8">
+            <div id="btn-container" class="flex justify-center gap-2">
+
+            </div>
+        </section>
+        <section id="video-container" class="grid justify-between gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div class="card w-80 bg-base-100 shadow-xl">
                 <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
                 </figure>
@@ -81,8 +87,22 @@
                 </div>
             </div>
         </section>
+        <section class="flex justify-center items-center">
+            <div class="hidden" id="error">
+                <div>
+                    <img src="Icon.png" alt="">
+                </div>
+                <div>
+                    <p>Opps! There is no videos</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
+
+    <!-- script  -->
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
